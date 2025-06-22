@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موردك - بوابتك الآمنة للاستيراد من الصين</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="container-icon">
+                <i class="fas fa-ship"></i>
+            </div>
+            <div class="loading-text" data-ar="جاري التحميل..." data-en="Loading..." data-zh="加载中...">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <div class="logo">
+                        <i class="fas fa-anchor"></i>
+                        <span>موردك</span>
+                    </div>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <div class="lang-dropdown">
+                        <button class="lang-btn" id="langBtn">
+                            <img src="https://flagcdn.com/w20/sa.png" alt="Arabic" id="currentFlag">
+                            <span id="currentLang">العربية</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-menu" id="langMenu">
+                            <a href="#" onclick="changeLang('ar')" class="lang-option">
+                                <img src="https://flagcdn.com/w20/sa.png" alt="Arabic">
+                                <span>العربية</span>
+                            </a>
+                            <a href="#" onclick="changeLang('en')" class="lang-option">
+                                <img src="https://flagcdn.com/w20/us.png" alt="English">
+                                <span>English</span>
+                            </a>
+                            <a href="#" onclick="changeLang('zh')" class="lang-option">
+                                <img src="https://flagcdn.com/w20/cn.png" alt="Chinese">
+                                <span>中文</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" data-ar="الرئيسية" data-en="Home" data-zh="首页">الرئيسية</a></li>
+                    <li><a href="#about" data-ar="من نحن" data-en="About Us" data-zh="关于我们">من نحن</a></li>
+                    <li><a href="#services" data-ar="خدماتنا" data-en="Our Services" data-zh="我们的服务">خدماتنا</a></li>
+                    <li><a href="#vision" data-ar="رؤيتنا" data-en="Our Vision" data-zh="我们的愿景">رؤيتنا</a></li>
+                    <li><a href="#process" data-ar="سير العمل" data-en="Process" data-zh="工作流程">سير العمل</a></li>
+                    <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact Us" data-zh="联系我们">اتصل بنا</a></li>
+                    <li><button class="login-btn" onclick="openLoginModal()" data-ar="تسجيل الدخول" data-en="Login" data-zh="登录">تسجيل الدخول</button></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+            </div>
+            <div class="animated-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-handshake"></i>
+                        <span data-ar="شريكك الموثوق" data-en="Your Trusted Partner" data-zh="您值得信赖的合作伙伴">شريكك الموثوق</span>
+                    </div>
+                    <h1 class="hero-title" data-ar="منصة موردك" data-en="Mourdak Platform" data-zh="Mourdak平台">منصة موردك</h1>
+                    <h2 class="hero-subtitle" data-ar="بوابتك الآمنة للاستيراد من الصين" data-en="Your Secure Gateway to Import from China" data-zh="您从中国进口的安全门户">بوابتك الآمنة للاستيراد من الصين</h2>
+                    <p class="hero-description" data-ar="نحن الشريك الموثوق في تسهيل عمليات الاستيراد والتجارة الدولية، نمكن الأفراد والشركات من الوصول إلى أفضل المنتجات والفرص من الصين بكل سهولة وثقة." data-en="We are the trusted partner in facilitating import operations and international trade, enabling individuals and companies to access the best products and opportunities from China with ease and confidence." data-zh="我们是促进进口业务和国际贸易的可信赖合作伙伴，使个人和公司能够轻松、自信地获得来自中国的最佳产品和机会。">نحن الشريك الموثوق في تسهيل عمليات الاستيراد والتجارة الدولية، نمكن الأفراد والشركات من الوصول إلى أفضل المنتجات والفرص من الصين بكل سهولة وثقة.</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="scrollToSection('services')" data-ar="استكشف خدماتنا" data-en="Explore Our Services" data-zh="探索我们的服务">
+                            <i class="fas fa-rocket"></i>
+                            <span>استكشف خدماتنا</span>
+                        </button>
+                        <button class="btn-secondary" onclick="openConsultationModal()" data-ar="استشارة مجانية" data-en="Free Consultation" data-zh="免费咨询">
+                            <i class="fas fa-comments"></i>
+                            <span>استشارة مجانية</span>
+                        </button>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="500">0</div>
+                            <div class="stat-label" data-ar="عميل راضي" data-en="Happy Clients" data-zh="满意客户">عميل راضي</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="1000">0</div>
+                            <div class="stat-label" data-ar="شحنة مكتملة" data-en="Completed Shipments" data-zh="完成货运">شحنة مكتملة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label" data-ar="مصنع شريك" data-en="Partner Factories" data-zh="合作工厂">مصنع شريك</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="container-visual">
+                        <img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Container Ship">
+                        <div class="floating-icons">
+                            <div class="icon-float icon-1"><i class="fas fa-ship"></i></div>
+                            <div class="icon-float icon-2"><i class="fas fa-globe-asia"></i></div>
+                            <div class="icon-float icon-3"><i class="fas fa-boxes"></i></div>
+                            <div class="icon-float icon-4"><i class="fas fa-handshake"></i></div>
+                            <div class="icon-float icon-5"><i class="fas fa-shield-alt"></i></div>
+                            <div class="icon-float icon-6"><i class="fas fa-truck"></i></div>
+                        </div>
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play-circle"></i>
+                                <span data-ar="شاهد كيف نعمل" data-en="See How We Work" data-zh="了解我们的工作方式">شاهد كيف نعمل</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-users"></i>
+                    <span data-ar="من نحن" data-en="Who We Are" data-zh="我们是谁">من نحن</span>
+                </div>
+                <h2 data-ar="نحن فريق من الخبراء المتخصصين" data-en="We are a team of specialized experts" data-zh="我们是一支专业的专家团队">نحن فريق من الخبراء المتخصصين</h2>
+                <p data-ar="نقدم حلول متكاملة للاستيراد من الصين بأعلى معايير الجودة والموثوقية" data-en="We provide integrated solutions for importing from China with the highest standards of quality and reliability" data-zh="我们以最高的质量和可靠性标准提供从中国进口的综合解决方案">نقدم حلول متكاملة للاستيراد من الصين بأعلى معايير الجودة والموثوقية</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4 data-ar="خبرة واسعة" data-en="Extensive Experience" data-zh="丰富经验">خبرة واسعة</h4>
+                                <p data-ar="أكثر من 10 سنوات في مجال الاستيراد والتجارة الدولية" data-en="More than 10 years in import and international trade" data-zh="在进口和国际贸易领域拥有超过10年的经验">أكثر من 10 سنوات في مجال الاستيراد والتجارة الدولية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4 data-ar="شبكة عالمية" data-en="Global Network" data-zh="全球网络">شبكة عالمية</h4>
+                                <p data-ar="شراكات قوية مع أفضل المصانع والموردين في الصين" data-en="Strong partnerships with the best factories and suppliers in China" data-zh="与中国最好的工厂和供应商建立强有力的合作伙伴关系">شراكات قوية مع أفضل المصانع والموردين في الصين</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-check"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4 data-ar="ضمان الجودة" data-en="Quality Assurance" data-zh="质量保证">ضمان الجودة</h4>
+                                <p data-ar="فحص دقيق لجميع المنتجات قبل الشحن لضمان أعلى معايير الجودة" data-en="Thorough inspection of all products before shipping to ensure the highest quality standards" data-zh="在发货前对所有产品进行彻底检查，确保最高质量标准">فحص دقيق لجميع المنتجات قبل الشحن لضمان أعلى معايير الجودة</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-description">
+                        <p data-ar="موردك هي منصة رائدة ومتكاملة متخصصة في تبسيط وتأمين عملية الاستيراد من الصين. نلتزم بتقديم حلول لوجستية وتجارية شاملة، تبدأ من الفكرة الأولية للمنتج وتصل بك إلى باب منزلك أو مستودعك." data-en="Mourdak is a leading and integrated platform specialized in simplifying and securing the import process from China. We are committed to providing comprehensive logistical and commercial solutions, starting from the initial product idea and reaching you to your doorstep or warehouse." data-zh="Mourdak是一个领先的综合平台，专门从事简化和保障从中国进口的流程。我们致力于提供全面的物流和商业解决方案，从最初的产品想法开始，直到送达您的门口或仓库。">موردك هي منصة رائدة ومتكاملة متخصصة في تبسيط وتأمين عملية الاستيراد من الصين. نلتزم بتقديم حلول لوجستية وتجارية شاملة، تبدأ من الفكرة الأولية للمنتج وتصل بك إلى باب منزلك أو مستودعك.</p>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="About Us">
+                        <div class="image-decoration">
+                            <div class="decoration-circle"></div>
+                            <div class="decoration-dots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="vision-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-eye"></i>
+                    <span data-ar="رؤيتنا وأهدافنا" data-en="Our Vision & Goals" data-zh="我们的愿景和目标">رؤيتنا وأهدافنا</span>
+                </div>
+                <h2 data-ar="نحو مستقبل أفضل للتجارة الدولية" data-en="Towards a Better Future for International Trade" data-zh="迈向国际贸易的美好未来">نحو مستقبل أفضل للتجارة الدولية</h2>
+            </div>
+            
+            <div class="vision-content">
+                <div class="vision-item">
+                    <div class="vision-card">
+                        <div class="vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 data-ar="رؤيتنا" data-en="Our Vision" data-zh="我们的愿景">رؤيتنا</h3>
+                        <p data-ar="أن نكون الشريك الموثوق والسباق في تسهيل عمليات الاستيراد والتجارة الدولية، ممكّنين الأفراد والشركات من الوصول إلى أفضل المنتجات والفرص من الصين بكل سهولة وثقة." data-en="To be the trusted and pioneering partner in facilitating import operations and international trade, enabling individuals and companies to access the best products and opportunities from China with ease and confidence." data-zh="成为促进进口业务和国际贸易的可信赖和领先合作伙伴，使个人和公司能够轻松、自信地获得来自中国的最佳产品和机会。">أن نكون الشريك الموثوق والسباق في تسهيل عمليات الاستيراد والتجارة الدولية، ممكّنين الأفراد والشركات من الوصول إلى أفضل المنتجات والفرص من الصين بكل سهولة وثقة.</p>
+                        <div class="vision-decoration">
+                            <div class="decoration-line"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vision-item">
+                    <div class="vision-card">
+                        <div class="vision-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 data-ar="أهدافنا" data-en="Our Goals" data-zh="我们的目标">أهدافنا</h3>
+                        <div class="goals-list">
+                            <div class="goal-item">
+                                <div class="goal-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4 data-ar="تبسيط عملية الاستيراد" data-en="Simplifying the import process" data-zh="简化进口流程">تبسيط عملية الاستيراد</h4>
+                                    <p data-ar="جعل الاستيراد متاحاً وسهلاً للجميع" data-en="Making import accessible and easy for everyone" data-zh="让每个人都能轻松进口">جعل الاستيراد متاحاً وسهلاً للجميع</p>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-item">
+                                <div class="goal-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4 data-ar="ضمان الجودة والموثوقية" data-en="Ensuring quality and reliability" data-zh="确保质量和可靠性">ضمان الجودة والموثوقية</h4>
+                                    <p data-ar="توفير منتجات عالية الجودة" data-en="Providing high-quality products" data-zh="提供高质量产品">توفير منتجات عالية الجودة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-item">
+                                <div class="goal-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4 data-ar="تقديم حلول متكاملة" data-en="Providing integrated solutions" data-zh="提供综合解决方案">تقديم حلول متكاملة</h4>
+                                    <p data-ar="خدمات شاملة من البداية للنهاية" data-en="Comprehensive end-to-end services" data-zh="全面的端到端服务">خدمات شاملة من البداية للنهاية</p>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-item">
+                                <div class="goal-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4 data-ar="دعم رواد الأعمال" data-en="Supporting entrepreneurs" data-zh="支持企业家">دعم رواد الأعمال</h4>
+                                    <p data-ar="تمكين النمو والتوسع التجاري" data-en="Enabling business growth and expansion" data-zh="促进业务增长和扩张">تمكين النمو والتوسع التجاري</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-cogs"></i>
+                    <span data-ar="خدماتنا" data-en="Our Services" data-zh="我们的服务">خدماتنا</span>
+                </div>
+                <h2 data-ar="خدمات متكاملة لنجاح مشروعك" data-en="Integrated Services for Your Project Success" data-zh="为您的项目成功提供综合服务">خدمات متكاملة لنجاح مشروعك</h2>
+                <p data-ar="نقدم مجموعة شاملة من الخدمات لتسهيل عملية الاستيراد وضمان نجاح مشروعك" data-en="We offer a comprehensive range of services to facilitate the import process and ensure your project success" data-zh="我们提供全面的服务来促进进口流程并确保您的项目成功">نقدم مجموعة شاملة من الخدمات لتسهيل عملية الاستيراد وضمان نجاح مشروعك</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" onclick="openServiceModal('import')">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Import Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="الاستيراد" data-en="Import" data-zh="进口">الاستيراد</h3>
+                        <p data-ar="نبسط عملية الاستيراد للأفراد والشركات" data-en="We simplify the import process for individuals and companies" data-zh="我们为个人和公司简化进口流程">نبسط عملية الاستيراد للأفراد والشركات</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="سريع" data-en="Fast" data-zh="快速">سريع</span>
+                            <span class="feature-tag" data-ar="آمن" data-en="Secure" data-zh="安全">آمن</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal('inspection')">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Inspection Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="الفحص" data-en="Inspection" data-zh="检验">الفحص</h3>
+                        <p data-ar="فحص شامل للمنتجات بنسبة 100%" data-en="Comprehensive product inspection 100%" data-zh="100%全面产品检验">فحص شامل للمنتجات بنسبة 100%</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="دقيق" data-en="Accurate" data-zh="准确">دقيق</span>
+                            <span class="feature-tag" data-ar="شامل" data-en="Comprehensive" data-zh="全面">شامل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal('representation')">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Representation Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="التمثيل" data-en="Representation" data-zh="代表">التمثيل</h3>
+                        <p data-ar="نعمل كوكلاء معتمدين مع المصانع الصينية" data-en="We work as authorized agents with Chinese factories" data-zh="我们作为中国工厂的授权代理">نعمل كوكلاء معتمدين مع المصانع الصينية</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="موثوق" data-en="Trusted" data-zh="可信">موثوق</span>
+                            <span class="feature-tag" data-ar="معتمد" data-en="Certified" data-zh="认证">معتمد</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal('compliance')">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/3194519/pexels-photo-3194519.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Compliance Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="الامتثال" data-en="Compliance" data-zh="合规">الامتثال</h3>
+                        <p data-ar="ضمان التوافق مع أعلى معايير الصناعة" data-en="Ensuring compliance with the highest industry standards" data-zh="确保符合最高行业标准">ضمان التوافق مع أعلى معايير الصناعة</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="معايير عالية" data-en="High Standards" data-zh="高标准">معايير عالية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal('documentation')">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/4386472/pexels-photo-4386472.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Documentation Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="التوثيق" data-en="Documentation" data-zh="文档">التوثيق</h3>
+                        <p data-ar="حلول توثيق كاملة تشمل وثائق الجودة" data-en="Complete documentation solutions including quality documents" data-zh="包括质量文件在内的完整文档解决方案">حلول توثيق كاملة تشمل وثائق الجودة</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="كامل" data-en="Complete" data-zh="完整">كامل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal('shipping')">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/1346086/pexels-photo-1346086.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shipping Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="الشحن" data-en="Shipping" data-zh="运输">الشحن</h3>
+                        <p data-ar="إدارة جميع خدمات الشحن اللوجستية" data-en="Managing all logistical shipping services" data-zh="管理所有物流运输服务">إدارة جميع خدمات الشحن اللوجستية</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="عالمي" data-en="Global" data-zh="全球">عالمي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal('pricing')">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Pricing Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="خطة تسعيرية" data-en="Pricing Plan" data-zh="价格计划">خطة تسعيرية</h3>
+                        <p data-ar="نساعدك في إنشاء خطة تسعيرية متكاملة" data-en="We help you create a comprehensive pricing plan" data-zh="我们帮助您制定全面的价格计划">نساعدك في إنشاء خطة تسعيرية متكاملة</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="استراتيجي" data-en="Strategic" data-zh="战略性">استراتيجي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal('marketing')">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/7413900/pexels-photo-7413900.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Marketing Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="خطة تسويقية" data-en="Marketing Plan" data-zh="营销计划">خطة تسويقية</h3>
+                        <p data-ar="خطة تسويقية فعالة لجذب العملاء" data-en="Effective marketing plan to attract customers" data-zh="吸引客户的有效营销计划">خطة تسويقية فعالة لجذب العملاء</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="فعال" data-en="Effective" data-zh="有效">فعال</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal('feasibility')">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Feasibility Service">
+                        <div class="service-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-ar="دراسة جدوى" data-en="Feasibility Study" data-zh="可行性研究">دراسة جدوى</h3>
+                        <p data-ar="تقييم جدوى المشروع من جميع النواحي" data-en="Evaluate project feasibility from all aspects" data-zh="从各个方面评估项目可行性">تقييم جدوى المشروع من جميع النواحي</p>
+                        <div class="service-features">
+                            <span class="feature-tag" data-ar="شامل" data-en="Comprehensive" data-zh="全面">شامل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+<section id="process" class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">
+                <i class="fas fa-route"></i>
+                <span data-ar="دليل التنفيذ الاحترافي" data-en="Professional Implementation Guide" data-zh="专业实施指南">دليل التنفيذ الاحترافي</span>
+            </div>
+            <h2 data-ar="رحلة احترافية من الفكرة إلى التسليم" data-en="Professional Journey from Idea to Delivery" data-zh="从想法到交付的专业旅程">رحلة احترافية من الفكرة إلى التسليم</h2>
+            <p data-ar="اتبع الخطوات أدناه لتعيش تجربة احترافية تليق بتوقعاتك" data-en="Follow the steps below to experience a professional journey that meets your expectations" data-zh="按照以下步骤体验符合您期望的专业旅程">اتبع الخطوات أدناه لتعيش تجربة احترافية تليق بتوقعاتك</p>
+        </div>
+
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 data-ar="تواصل معنا" data-en="Contact Us" data-zh="联系我们">تواصل معنا</h3>
+                    <p data-ar="ابدأ رحلتك بالتواصل معنا لتحديد احتياجاتك" data-en="Start your journey by contacting us to define your needs" data-zh="通过联系我们开始您的旅程，明确您的需求">ابدأ رحلتك بالتواصل معنا لتحديد احتياجاتك</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 data-ar="احصل على العرض" data-en="Get the Offer" data-zh="获取报价">احصل على العرض</h3>
+                    <p data-ar="سنقدم لك عرضًا متكاملًا يناسب ميزانيتك" data-en="We will provide you with a comprehensive offer that fits your budget" data-zh="我们将为您提供符合预算的全面报价">سنقدم لك عرضًا متكاملًا يناسب ميزانيتك</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3 data-ar="اختبار العينات" data-en="Sample Testing" data-zh="样品测试">اختبار العينات</h3>
+                    <p data-ar="قيّم جودة المنتجات عبر عينات حقيقية" data-en="Evaluate product quality through real samples" data-zh="通过真实样品评估产品质量">قيّم جودة المنتجات عبر عينات حقيقية</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3 data-ar="مطابقة الجودة" data-en="Quality Matching" data-zh="质量匹配">مطابقة الجودة</h3>
+                    <p data-ar="نضمن توافق المنتجات مع معاييرك المحددة" data-en="We ensure products match your specified standards" data-zh="我们确保产品符合您的指定标准">نضمن توافق المنتجات مع معاييرك المحددة</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 data-ar="تصميم المنتج" data-en="Product Design" data-zh="产品设计">تصميم المنتج</h3>
+                    <p data-ar="شاركنا رؤيتك ليحول فريقنا أفكارك إلى تصميم احترافي" data-en="Share your vision so our team can turn your ideas into professional design" data-zh="分享您的愿景，让我们的团队将您的想法转化为专业设计">شاركنا رؤيتك ليحول فريقنا أفكارك إلى تصميم احترافي</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3 data-ar="توثيق الطلب" data-en="Order Documentation" data-zh="订单记录">توثيق الطلب</h3>
+                    <p data-ar="وثّق طلبك رسميًا لبدء العملية بكل وضوح وشفافية" data-en="Document your order officially to start the process with clarity and transparency" data-zh="正式记录您的订单，以清晰透明的方式开始流程">وثّق طلبك رسميًا لبدء العملية بكل وضوح وشفافية</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">7</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 data-ar="دفع العربون" data-en="Down Payment" data-zh="支付定金">دفع العربون</h3>
+                    <p data-ar="ادفع العربون للانطلاق في تنفيذ طلبك بكل ثقة واستقرار" data-en="Make the down payment to confidently begin processing your order" data-zh="支付定金，自信开始执行您的订单">ادفع العربون للانطلاق في تنفيذ طلبك بكل ثقة واستقرار</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">8</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 data-ar="بداية التصنيع" data-en="Start Manufacturing" data-zh="开始生产">بداية التصنيع</h3>
+                    <p data-ar="نبدأ عملية التصنيع بأعلى معايير الدقة والجودة لتحقيق نتائج مثالية" data-en="We start the manufacturing process with the highest standards to achieve perfect results" data-zh="我们以最高标准开始生产过程，以实现理想结果">نبدأ عملية التصنيع بأعلى معايير الدقة والجودة لتحقيق نتائج مثالية</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">9</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 data-ar="تنسيق الاستلام" data-en="Delivery Coordination" data-zh="协调交付">تنسيق الاستلام</h3>
+                    <p data-ar="سنرتب عملية الاستلام بمرونة وسلاسة تتماشى مع جدولك" data-en="We will coordinate delivery flexibly to suit your schedule" data-zh="我们将灵活安排交付以适应您的时间表">سنرتب عملية الاستلام بمرونة وسلاسة تتماشى مع جدولك</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">10</div>
+                <div class="step-content">
+                    <div class="step-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 data-ar="إنهاء الطلبية" data-en="Order Completion" data-zh="订单完成">إنهاء الطلبية</h3>
+                    <p data-ar="استلم منتجاتك النهائية جاهزة للاستخدام مع ضمان المتابعة والدعم عند الحاجة" data-en="Receive your final products ready for use with ongoing support if needed" data-zh="接收已完成的产品，随时享有后续支持">استلم منتجاتك النهائية جاهزة للاستخدام مع ضمان المتابعة والدعم عند الحاجة</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    <span data-ar="مميزاتنا" data-en="Our Advantages" data-zh="我们的优势">مميزاتنا</span>
+                </div>
+                <h2 data-ar="لماذا تختار موردك؟" data-en="Why Choose Mourdak?" data-zh="为什么选择Mourdak？">لماذا تختار موردك؟</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-ar="استشارة مجانية" data-en="Free Consultation" data-zh="免费咨询">استشارة مجانية</h3>
+                        <p data-ar="نقدم لك استشارة مجانية لمساعدتك في اتخاذ أفضل القرارات" data-en="We provide free consultation to help you make the best decisions" data-zh="我们提供免费咨询，帮助您做出最佳决策">نقدم لك استشارة مجانية لمساعدتك في اتخاذ أفضل القرارات</p>
+                    </div>
+                    <div class="feature-decoration">
+                        <div class="decoration-circle"></div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-ar="شحن سريع وموثوق" data-en="Fast and Reliable Shipping" data-zh="快速可靠的运输">شحن سريع وموثوق</h3>
+                        <p data-ar="نتعاقد مع أفضل شركات الشحن لضمان وصول منتجاتك بأمان" data-en="We contract with the best shipping companies to ensure your products arrive safely" data-zh="我们与最好的运输公司合作，确保您的产品安全到达">نتعاقد مع أفضل شركات الشحن لضمان وصول منتجاتك بأمان</p>
+                    </div>
+                    <div class="feature-decoration">
+                        <div class="decoration-circle"></div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-ar="إدارة لوجستية متكاملة" data-en="Integrated Logistics Management" data-zh="综合物流管理">إدارة لوجستية متكاملة</h3>
+                        <p data-ar="نتولى كل تفاصيل الشحن والتخليص الجمركي بدقة" data-en="We handle all shipping and customs clearance details accurately" data-zh="我们准确处理所有运输和清关细节">نتولى كل تفاصيل الشحن والتخليص الجمركي بدقة</p>
+                    </div>
+                    <div class="feature-decoration">
+                        <div class="decoration-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-anchor"></i>
+                        <span>موردك</span>
+                    </div>
+                    <p data-ar="بوابتك الآمنة للاستيراد من الصين" data-en="Your Secure Gateway to Import from China" data-zh="您从中国进口的安全门户">بوابتك الآمنة للاستيراد من الصين</p>
+                    <div class="footer-stats">
+                        <div class="footer-stats" style="display: flex; gap: 40px; flex-wrap: wrap; align-items: center; justify-content: center; padding: 20px 0;">
+    <div class="footer-stat" style="display: flex; align-items: center; gap: 15px;">
+        <i class="fas fa-users" style="color: #27ae60; font-size: 2em;"></i>
+        <div>
+            <div style="font-size: 1.5em; font-weight: bold; color: #2c3e50;">+500</div>
+            <span class="stat-label" data-ar="عميل راضي" data-en="Happy Clients" data-zh="满意客户">عميل راضي</span>
+        </div>
+    </div>
+    <div class="footer-stat" style="display: flex; align-items: center; gap: 15px;">
+        <i class="fas fa-shipping-fast" style="color: #2980b9; font-size: 2em;"></i>
+        <div>
+            <div style="font-size: 1.5em; font-weight: bold; color: #2c3e50;">+1000</div>
+            <span class="stat-label" data-ar="شحنة مكتملة" data-en="Completed Shipments" data-zh="完成货运">شحنة مكتملة</span>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-ar="روابط سريعة" data-en="Quick Links" data-zh="快速链接">روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home" data-ar="الرئيسية" data-en="Home" data-zh="首页">الرئيسية</a></li>
+                        <li><a href="#services" data-ar="خدماتنا" data-en="Our Services" data-zh="我们的服务">خدماتنا</a></li>
+                        <li><a href="#about" data-ar="من نحن" data-en="About Us" data-zh="关于我们">من نحن</a></li>
+                        <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact Us" data-zh="联系我们">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-ar="تواصل معنا" data-en="Contact Us" data-zh="联系我们">تواصل معنا</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                             <span>86-15527444366 +</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span> info@mourdak.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-ar="قوانغدونغ _ الصين" data-en="Guangdong, China" data-zh="中国广东">
+                              <i class="fas fa-map-marker-alt" style="margin-left: 5px; color: #e74c3c; font-size: 0.9em;"></i>
+                                     قوانغدونغ _ الصين
+                                    </span>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-ar="تابعنا" data-en="Follow Us" data-zh="关注我们">تابعنا</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-ar="© 2025 موردك. جميع الحقوق محفوظة." data-en="© 2025 Mourdak. All rights reserved." data-zh="© 2025 Mourdak。保留所有权利。">© 2025 موردك. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <div class="fab-main" id="fabMain">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="fab-menu" id="fabMenu">
+                <a href="https://wa.me/8615527444366" class="fab-item" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span data-ar="واتساب" data-en="WhatsApp" data-zh="微信">واتساب</span>
+            </a>
+            <a href="mailto:info@mourdak.com" class="fab-item">
+                <i class="fas fa-envelope"></i>
+                <span data-ar="إيميل" data-en="Email" data-zh="邮箱">إيميل</span>
+            </a>
+            <button class="fab-item" onclick="openConsultationModal()">
+                <i class="fas fa-question-circle"></i>
+                <span data-ar="استشارة" data-en="Consultation" data-zh="咨询">استشارة</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2 data-ar="تسجيل الدخول" data-en="Login" data-zh="登录">تسجيل الدخول</h2>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="switchTab('login')" data-ar="تسجيل الدخول" data-en="Login" data-zh="登录">تسجيل الدخول</button>
+                <button class="tab-btn" onclick="switchTab('register')" data-ar="إنشاء حساب" data-en="Register" data-zh="注册">إنشاء حساب</button>
+            </div>
+            
+            <div id="loginForm" class="auth-form active">
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label data-ar="اسم المستخدم" data-en="Username" data-zh="用户名">اسم المستخدم</label>
+                        <input type="text" id="loginUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="كلمة المرور" data-en="Password" data-zh="密码">كلمة المرور</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn-primary" data-ar="دخول" data-en="Login" data-zh="登录">دخول</button>
+                </form>
+            </div>
+            
+            <div id="registerForm" class="auth-form">
+                <form onsubmit="handleRegister(event)">
+                    <div class="form-group">
+                        <label data-ar="الاسم الكامل" data-en="Full Name" data-zh="全名">الاسم الكامل</label>
+                        <input type="text" id="registerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="البريد الإلكتروني" data-en="Email" data-zh="邮箱">البريد الإلكتروني</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="رقم الهاتف" data-en="Phone Number" data-zh="电话号码">رقم الهاتف</label>
+                        <input type="tel" id="registerPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-ar="كلمة المرور" data-en="Password" data-zh="密码">كلمة المرور</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <button type="submit" class="btn-primary" data-ar="إنشاء حساب" data-en="Create Account" data-zh="创建账户">إنشاء حساب</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultation Modal -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('consultationModal')">&times;</span>
+            <h2 data-ar="استشارة مجانية" data-en="Free Consultation" data-zh="免费咨询">استشارة مجانية</h2>
+            
+            <form onsubmit="handleConsultation(event)">
+                <div class="form-group">
+                    <label data-ar="الاسم" data-en="Name" data-zh="姓名">الاسم</label>
+                    <input type="text" id="consultName" required>
+                </div>
+                <div class="form-group">
+                    <label data-ar="البريد الإلكتروني" data-en="Email" data-zh="邮箱">البريد الإلكتروني</label>
+                    <input type="email" id="consultEmail" required>
+                </div>
+                <div class="form-group">
+                    <label data-ar="رقم الهاتف" data-en="Phone Number" data-zh="电话号码">رقم الهاتف</label>
+                    <input type="tel" id="consultPhone" required>
+                </div>
+                <div class="form-group">
+                    <label data-ar="الخدمة المطلوبة" data-en="Required Service" data-zh="所需服务">الخدمة المطلوبة</label>
+                    <select id="consultService" required>
+                        <option value="" data-ar="اختر الخدمة" data-en="Select Service" data-zh="选择服务">اختر الخدمة</option>
+                        <option value="import" data-ar="الاستيراد" data-en="Import" data-zh="进口">الاستيراد</option>
+                        <option value="inspection" data-ar="الفحص" data-en="Inspection" data-zh="检验">الفحص</option>
+                        <option value="representation" data-ar="التمثيل" data-en="Representation" data-zh="代表">التمثيل</option>
+                        <option value="compliance" data-ar="الامتثال" data-en="Compliance" data-zh="合规">الامتثال</option>
+                        <option value="documentation" data-ar="التوثيق" data-en="Documentation" data-zh="文档">التوثيق</option>
+                        <option value="shipping" data-ar="الشحن" data-en="Shipping" data-zh="运输">الشحن</option>
+                        <option value="pricing" data-ar="خطة تسعيرية" data-en="Pricing Plan" data-zh="价格计划">خطة تسعيرية</option>
+                        <option value="marketing" data-ar="خطة تسويقية" data-en="Marketing Plan" data-zh="营销计划">خطة تسويقية</option>
+                        <option value="feasibility" data-ar="دراسة جدوى" data-en="Feasibility Study" data-zh="可行性研究">دراسة جدوى</option>
+                        <option value="other" data-ar="أخرى" data-en="Other" data-zh="其他">أخرى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-ar="تفاصيل الطلب" data-en="Request Details" data-zh="请求详情">تفاصيل الطلب</label>
+                    <textarea id="consultMessage" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" data-ar="إرسال الطلب" data-en="Send Request" data-zh="发送请求">إرسال الطلب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Service Detail Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content service-modal-content">
+            <span class="close" onclick="closeModal('serviceModal')">&times;</span>
+            <div id="serviceModalContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
