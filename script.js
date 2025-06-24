@@ -326,7 +326,7 @@ const serviceDetails = {
                 '数字文档管理',
                 '安全备份副本'
             ],
-            image: 'https://images.pexels.com/photos/4386472/pexels-photo-4386472.jpeg?auto=compress&cs=tinysrgb&w=800'
+            image: 'https://images.pexels.com/photos/4386472/pexels-photo-4386472.jpeg?auto=compress&cs=tinysrgb&w=800 '
         }
     },
     shipping: {
@@ -342,7 +342,7 @@ const serviceDetails = {
                 'خيارات شحن متعددة',
                 'دعم لوجستي متكامل'
             ],
-            image: 'https://images.pexels.com/photos/1346086/pexels-photo-1346086.jpeg?auto=compress&cs=tinysrgb&w=800'
+            image: 'gallery.jpg'
         },
         en: {
             title: 'Shipping Service',
@@ -356,7 +356,7 @@ const serviceDetails = {
                 'Multiple shipping options',
                 'Integrated logistics support'
             ],
-            image: 'https://images.pexels.com/photos/1346086/pexels-photo-1346086.jpeg?auto=compress&cs=tinysrgb&w=800'
+            image: 'gallery.jpg'
         },
         zh: {
             title: '运输服务',
@@ -370,7 +370,7 @@ const serviceDetails = {
                 '多种运输选择',
                 '综合物流支持'
             ],
-            image: 'https://images.pexels.com/photos/1346086/pexels-photo-1346086.jpeg?auto=compress&cs=tinysrgb&w=800'
+            image: ' gallery.jpg'
         }
     },
     pricing: {
@@ -430,7 +430,7 @@ const serviceDetails = {
                 'تحليل سلوك المستهلك',
                 'قياس الأداء والتحسين'
             ],
-            image: 'https://images.pexels.com/photos/7413900/pexels-photo-7413900.jpeg?auto=compress&cs=tinysrgb&w=800'
+            image: 'hot.jpg'
         },
         en: {
             title: 'Marketing Plan Service',
@@ -444,7 +444,7 @@ const serviceDetails = {
                 'Consumer behavior analysis',
                 'Performance measurement and optimization'
             ],
-            image: 'https://images.pexels.com/photos/7413900/pexels-photo-7413900.jpeg?auto=compress&cs=tinysrgb&w=800'
+            image:' hot.jpg'
         },
         zh: {
             title: '营销计划服务',
@@ -458,7 +458,7 @@ const serviceDetails = {
                 '消费者行为分析',
                 '绩效测量和优化'
             ],
-            image: 'https://images.pexels.com/photos/7413900/pexels-photo-7413900.jpeg?auto=compress&cs=tinysrgb&w=800'
+            image: 'hot.jpg'
         }
     },
     feasibility: {
@@ -474,7 +474,7 @@ const serviceDetails = {
                 'تحليل التدفق النقدي',
                 'خطة التنفيذ المرحلية'
             ],
-            image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800'
+            image: ' https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800'
         },
         en: {
             title: 'Feasibility Study Service',
